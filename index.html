@@ -116,7 +116,8 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;padd
 [data-l="es"]{display:none}
 body.es [data-l="en"]{display:none}
 body.es [data-l="es"]{display:revert}
-.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.top .kick{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;font-size:clamp(9px,2.9vw,12px)}
 .lang{font:600 13px Inter,sans-serif;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
 .mys{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:0 0 6px}
 .mys select{width:100%;font:500 15px Inter,sans-serif;padding:10px;border:1px solid var(--line);border-radius:10px;background:#faf8f4;color:var(--ink)}
@@ -174,7 +175,7 @@ body.es [data-l="es"]{display:revert}
 <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M16 18a2 2 0 0 1 2 2 2 2 0 0 1 2-2 2 2 0 0 1-2-2 2 2 0 0 1-2 2M16 6a2 2 0 0 1 2 2 2 2 0 0 1 2-2 2 2 0 0 1-2-2 2 2 0 0 1-2 2M9 18a6 6 0 0 1 6-6 6 6 0 0 1-6-6 6 6 0 0 1-6 6 6 6 0 0 1 6 6"/></symbol>
 </svg>
 <header><div class="wrap">
-  <div class="top"><div class="kick"><span data-l="en">Independent parent resource · Not an official district site</span><span data-l="es">Recurso independiente para padres · No es un sitio oficial del distrito</span></div><button type="button" class="lang" id="langbtn" lang="es">Español</button></div>
+  <div class="top"><div class="kick"><span data-l="en">Parent-run · Not an official district site</span><span data-l="es">Hecho por padres · Sitio no oficial del distrito</span></div><button type="button" class="lang" id="langbtn" lang="es">Español</button></div>
   <h1><span data-l="en">A Parent's Guide to USD 353</span><span data-l="es">Guía para padres de USD 353</span></h1>
   <label class="sb"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="What do you need help with?" autocomplete="off" aria-label="Search the guide"></label>
 </div></header>
