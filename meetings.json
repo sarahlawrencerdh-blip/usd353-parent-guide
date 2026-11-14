@@ -1,0 +1,565 @@
+{
+ "updated": "2026-11-14",
+ "note": "Board meeting list for the USD 353 parent guide. School years run July-June, newest first. Each row: d=date (YYYY-MM-DD), t=meeting type, m=minutes PDF URL, v=video URL. Source: usd353.com minutes and BOE video pages.",
+ "meetings": [
+  {
+   "y": "2026–27",
+   "r": [
+    {
+     "d": "2026-10-19",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/aa2d/11/12/26/210820-def6afb2-1844-486a-a5fa-20858bdc4c12.pdf"
+    },
+    {
+     "d": "2026-10-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/581f/11/12/26/210755-40bad598-6b29-4113-a669-4be3099e0b45.pdf"
+    },
+    {
+     "d": "2026-09-29",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/23f4/10/13/26/210745-bdc3470f-0643-4869-86bd-2c4a71b42fcb.pdf"
+    },
+    {
+     "d": "2026-09-21",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/f369/10/13/26/210726-2fef1dcb-1110-4f8f-a68d-0dd1baf0ab9b.pdf"
+    },
+    {
+     "d": "2026-09-14",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/3a7e/10/13/26/210708-b213c871-8797-44df-8337-59f2eda441a9.pdf",
+     "v": "https://youtu.be/kxLD5Z1OALY"
+    },
+    {
+     "d": "2026-09-14",
+     "t": "Budget hearing",
+     "m": "https://4.files.edl.io/c933/10/13/26/210547-9dffbbe3-c693-4560-89b2-126068b448ce.pdf"
+    },
+    {
+     "d": "2026-09-02",
+     "t": "Contract negotiations hearing",
+     "v": "https://youtu.be/wPJl7hVFc00"
+    },
+    {
+     "d": "2026-08-24",
+     "t": "Public hearing",
+     "v": "https://youtu.be/O5kwAtvNcao"
+    },
+    {
+     "d": "2026-08-12",
+     "t": "Contract negotiations meeting",
+     "v": "https://www.youtube.com/watch?v=GaL2Tdm3rHE"
+    },
+    {
+     "d": "2026-08-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/ff6d/09/15/26/201800-6c051aec-1a20-403a-9b37-fd2cd65b6131.pdf",
+     "v": "https://www.youtube.com/watch?v=_aQdoMl3M8A"
+    },
+    {
+     "d": "2026-07-27",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/5f8d/08/11/26/194555-74adb067-1148-4b7f-9ce0-ed2b49d09597.pdf",
+     "v": "https://youtu.be/jjqZEnlZiD8"
+    },
+    {
+     "d": "2026-07-15",
+     "t": "Contract negotiations meeting",
+     "v": "https://www.youtube.com/watch?v=xx5MoJ7Sqas"
+    },
+    {
+     "d": "2026-07-13",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/c6b4/08/11/26/194536-7e2f870b-65bd-429f-8d05-19127bb7b9f4.pdf",
+     "v": "https://youtu.be/v8famcnm_Bk"
+    }
+   ]
+  },
+  {
+   "y": "2025–26",
+   "r": [
+    {
+     "d": "2026-06-17",
+     "t": "Contract negotiations meeting",
+     "v": "https://youtu.be/cv0Qd0TYXzA"
+    },
+    {
+     "d": "2026-06-08",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/f109/07/14/26/165328-461fbf86-3fe3-44b3-9906-0e2f2b3c01cb.pdf",
+     "v": "https://youtu.be/cod6Fj2cQF0"
+    },
+    {
+     "d": "2026-05-27",
+     "t": "Contract negotiations meeting",
+     "v": "https://www.youtube.com/watch?v=tAE_wgxbQz8"
+    },
+    {
+     "d": "2026-05-11",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/48e6/06/11/26/211203-fd2c6176-6867-4891-a965-e983b7720345.pdf",
+     "v": "https://www.youtube.com/watch?v=rNgrBD-uEY4"
+    },
+    {
+     "d": "2026-04-13",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/1b75/05/13/26/164747-5846261f-a2c3-4e07-8cdb-7c40e3b9b8dc.pdf",
+     "v": "https://youtu.be/UqM6kjHRFSA"
+    },
+    {
+     "d": "2026-03-31",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/d0ea/04/17/26/150130-26e6b972-1809-4f0a-9135-8a3324f3aac7.pdf",
+     "v": "https://youtube.com/live/KvhiCTwIO28"
+    },
+    {
+     "d": "2026-03-09",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/b86a/04/17/26/150112-70c3c035-d55b-45a1-93ed-961a41783010.pdf",
+     "v": "https://youtu.be/ISLNObTC960"
+    },
+    {
+     "d": "2026-02-09",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/d1a4/03/11/26/170533-eb660296-eebe-416c-a1bb-3267089a2957.pdf",
+     "v": "https://youtu.be/gRUwjeOT85M"
+    },
+    {
+     "d": "2026-01-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/9743/02/12/26/180625-52236a90-31fc-48fe-9fc2-103a6cce06e8.pdf",
+     "v": "https://www.youtube.com/watch?v=4pmihY0QigY"
+    },
+    {
+     "d": "2025-12-08",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/4dd3/01/20/26/211444-f8822036-0622-4a0c-a599-1f4f3c53a632.pdf",
+     "v": "https://youtu.be/R6XEYROCxoo"
+    },
+    {
+     "d": "2025-11-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/2e38/12/10/25/175210-0312a140-910c-415f-bdb7-8294333cedfb.pdf",
+     "v": "https://youtu.be/FAvq6Idj-MQ"
+    },
+    {
+     "d": "2025-11-06",
+     "t": "Contract negotiations meeting",
+     "v": "https://www.youtube.com/live/TicKxKF7Gwg"
+    },
+    {
+     "d": "2025-11-03",
+     "t": "Special meeting",
+     "v": "https://www.youtube.com/watch?v=NjrvfYKXafo"
+    },
+    {
+     "d": "2025-10-13",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/5c70/11/12/25/223010-a52869cf-afa7-4a37-8580-01a1258b298d.pdf",
+     "v": "https://youtube.com/live/35fLY7fl1AA"
+    },
+    {
+     "d": "2025-10-07",
+     "t": "Contract negotiations meeting",
+     "v": "https://www.youtube.com/live/thW7dHuogZE"
+    },
+    {
+     "d": "2025-09-22",
+     "t": "Contract negotiations meeting",
+     "v": "https://youtube.com/live/9P8vpYxgxcU"
+    },
+    {
+     "d": "2025-09-16",
+     "t": "Contract negotiations meeting",
+     "v": "https://www.youtube.com/live/UN2oNgAyB7Y"
+    },
+    {
+     "d": "2025-09-08",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/bc87/10/28/25/203312-60094967-2157-4366-8471-b3facf4f4441.pdf",
+     "v": "https://youtu.be/aAhmKhQb6Mg"
+    },
+    {
+     "d": "2025-09-08",
+     "t": "RNR hearing",
+     "m": "https://4.files.edl.io/fce5/10/28/25/203238-e3303a86-af55-404a-9224-917ea7f51c14.pdf"
+    },
+    {
+     "d": "2025-09-08",
+     "t": "Budget hearing",
+     "m": "https://4.files.edl.io/805f/10/28/25/203258-a40fb10a-9c9c-4c71-aee4-c5d44ef48de5.pdf"
+    },
+    {
+     "d": "2025-08-25",
+     "t": "Contract negotiations meeting",
+     "v": "https://youtube.com/live/XNiP0w-mtZM"
+    },
+    {
+     "d": "2025-08-11",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/0c97/09/12/25/150845-b5c36bb2-b0e6-4524-8c20-18c89d3ea12c.pdf",
+     "v": "https://youtu.be/6Cs1zvUvMLU"
+    },
+    {
+     "d": "2025-07-28",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/09bf/08/12/25/165324-29603ff9-f4cc-4042-b9cb-44259d8af477.pdf",
+     "v": "https://youtu.be/vXlVKniTkJQ"
+    },
+    {
+     "d": "2025-07-14",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/8382/08/12/25/165245-4dbbc5e0-d8c6-4a40-a434-ac5923b1bd6e.pdf",
+     "v": "https://youtu.be/8C5kIPbnU3Y"
+    },
+    {
+     "d": "2025-07-09",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/1082/08/12/25/165148-2a2324dc-008c-463a-8485-602c82236ca3.pdf",
+     "v": "https://youtu.be/y5n5dLwbkCw"
+    }
+   ]
+  },
+  {
+   "y": "2024–25",
+   "r": [
+    {
+     "d": "2025-06-18",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/c6ce/07/16/25/160823-fdc01bd3-6fab-4b25-9777-47591e31c5b0.pdf",
+     "v": "https://youtu.be/N3RMj-c8F20"
+    },
+    {
+     "d": "2025-06-09",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/d97b/07/16/25/160753-b095d95b-14d2-4dcf-b59e-fa9768cf0456.pdf",
+     "v": "https://youtu.be/jtUa26QTEKI"
+    },
+    {
+     "d": "2025-05-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/2143/06/10/25/162910-f3957dbe-704d-4222-a62a-2f4434a4b9b0.pdf",
+     "v": "https://youtu.be/UraAKvgZYwU"
+    },
+    {
+     "d": "2025-04-14",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/d6f2/05/14/25/194900-207a35df-940a-41ea-9dcd-3053ffba10a5.pdf",
+     "v": "https://youtu.be/wUXvkEZMDLM"
+    },
+    {
+     "d": "2025-03-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/8677/05/14/25/194838-134e9040-47c9-4817-85e9-0f6ced08aa95.pdf",
+     "v": "https://youtu.be/IuNxRbh9zBo"
+    },
+    {
+     "d": "2025-03-04",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/a328/05/14/25/194750-3ec78831-f032-4b3e-a155-9f994630ab00.pdf",
+     "v": "https://youtu.be/QaWga7U1sHA"
+    },
+    {
+     "d": "2025-02-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/d41b/03/11/25/203805-22defef0-f47d-45c8-b57f-23e4a7626c0d.pdf",
+     "v": "https://youtu.be/rtxrR07lxLM"
+    },
+    {
+     "d": "2025-01-17",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/1907/02/04/25/220647-e589907d-1f68-42b8-9b17-ac9bab8547b5.pdf",
+     "v": "https://youtu.be/Ct7jdpIFzWg"
+    },
+    {
+     "d": "2025-01-13",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/0558/02/04/25/220624-adfddf17-ad12-4af8-851e-b4a1ca74cd51.pdf",
+     "v": "https://youtu.be/dT2LZqf4vmI"
+    },
+    {
+     "d": "2024-12-09",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/8213/02/04/25/220523-9169ccb1-90b5-4bff-a318-b7410c6b7299.pdf",
+     "v": "https://youtu.be/3bM8_snRvkk"
+    },
+    {
+     "d": "2024-11-11",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/474f/12/10/24/172239-eb1a5f93-a604-440e-946b-82aa25044c7c.pdf",
+     "v": "https://youtu.be/FTQUMraLiXM"
+    },
+    {
+     "d": "2024-10-14",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/f13a/12/03/24/151745-c08b1b1d-3732-4e90-90bf-928cab0da9a3.pdf",
+     "v": "https://youtube.com/live/SnAQqP74fUQ"
+    },
+    {
+     "d": "2024-09-30",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/5ede/10/22/24/153227-323cc866-866d-48ea-9c32-e95f45b7face.pdf",
+     "v": "https://youtu.be/_ohwfS3tBi0"
+    },
+    {
+     "d": "2024-09-09",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/b181/10/22/24/153206-47e90fa1-1658-4494-8c18-c550fabb8bc2.pdf",
+     "v": "https://youtu.be/DArfDr4KLRk"
+    },
+    {
+     "d": "2024-08-26",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/80a5/09/10/24/191245-6365516b-ea01-4f59-9c62-879a4dee90fa.pdf",
+     "v": "https://youtu.be/Kvnypw2llvw"
+    },
+    {
+     "d": "2024-08-19",
+     "t": "Budget hearing",
+     "m": "https://4.files.edl.io/da10/09/10/24/191229-0cb16c00-def1-464c-a4d7-8e3d2dd14055.pdf",
+     "v": "https://youtu.be/J2ay2CFGikk"
+    },
+    {
+     "d": "2024-08-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/d79a/09/10/24/191211-53f7edd4-0e62-4540-8317-3ea6c07a825b.pdf",
+     "v": "https://youtu.be/Ir5HBcTJAgo"
+    },
+    {
+     "d": "2024-08-01",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/8e6a/09/10/24/191134-e4806539-51a3-4a26-a7fd-6b7883257c18.pdf",
+     "v": "https://youtu.be/QUGHx7rfH8I"
+    },
+    {
+     "d": "2024-07-08",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/d9ef/08/14/24/164522-600dc23c-925d-4fbc-a7b8-e675029b45c9.pdf",
+     "v": "https://youtu.be/HQU667lULIQ"
+    }
+   ]
+  },
+  {
+   "y": "2023–24",
+   "r": [
+    {
+     "d": "2024-06-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/3976/07/16/24/150149-76db9d8c-8d20-44b5-a86f-bc1d98b3b610.pdf",
+     "v": "https://youtu.be/V4ESj2bbwBY"
+    },
+    {
+     "d": "2024-05-13",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/f12b/06/11/24/191651-dae69811-dd19-44d1-b98e-0e4b14d2fb42.pdf",
+     "v": "https://www.youtube.com/watch?v=3_0Dt8sPDm0"
+    },
+    {
+     "d": "2024-04-08",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/5d78/05/30/24/201455-408b98da-60a2-4eb9-b182-b6a99891242f.pdf",
+     "v": "https://www.youtube.com/watch?v=byP-4we4VtY"
+    },
+    {
+     "d": "2024-03-18",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/b099/04/15/24/211019-34e23bad-b098-46ad-b708-b3192c38f4e2.pdf",
+     "v": "https://www.youtube.com/watch?v=gI9xVF-N-KA"
+    },
+    {
+     "d": "2024-02-12",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/9248/03/27/24/171114-cbd26b6a-57fe-4d6c-aa3c-d6f14034f27e.pdf",
+     "v": "https://youtu.be/yJhOdNdEEBc"
+    },
+    {
+     "d": "2024-02-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/83d9/03/27/24/171204-88b47f7c-6ba7-45d7-a883-8356fd36e382.pdf",
+     "v": "https://youtu.be/yJhOdNdEEBc"
+    },
+    {
+     "d": "2024-01-11",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/6813/02/28/24/222358-101bc2e9-f6bd-4044-9a08-6e4d50e3a367.pdf",
+     "v": "https://www.youtube.com/watch?v=tfAyBQCR3L0"
+    },
+    {
+     "d": "2023-12-11",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/ad28/01/17/24/170610-1a1de1d6-466a-4173-b173-c0803cecb4b7.pdf",
+     "v": "https://www.youtube.com/watch?v=uugplEOdQQk"
+    },
+    {
+     "d": "2023-11-20",
+     "t": "Special meeting",
+     "v": "https://www.youtube.com/watch?v=bh_NiU2JCA0"
+    },
+    {
+     "d": "2023-11-13",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/eb54/01/17/24/170541-f8c58158-32df-4295-b791-c527342a0f45.pdf",
+     "v": "https://www.youtube.com/watch?v=_mR1C8C9rhI"
+    },
+    {
+     "d": "2023-10-09",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/492d/01/17/24/170458-5150778a-7369-4784-a42b-c9a900211d44.pdf",
+     "v": "https://www.youtube.com/watch?v=THZtSkPitf8"
+    },
+    {
+     "d": "2023-09-14",
+     "t": "Special meeting",
+     "v": "https://youtu.be/caCfYCJIQIE"
+    },
+    {
+     "d": "2023-09-11",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/9f4f/01/17/24/170427-76653356-83d0-4e4e-b576-c95af20edab7.pdf",
+     "v": "https://www.youtube.com/watch?v=Dps0oAJhnns"
+    },
+    {
+     "d": "2023-09-11",
+     "t": "RNR hearing",
+     "m": "https://4.files.edl.io/f22e/01/17/24/170335-66a86a7a-67d1-4793-af99-77a84b7ec5e4.pdf"
+    },
+    {
+     "d": "2023-09-11",
+     "t": "Budget hearing",
+     "m": "https://4.files.edl.io/ced7/01/17/24/170403-9d64cc52-3d1f-4ce6-a57f-84d28bf6f84d.pdf"
+    },
+    {
+     "d": "2023-08-28",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/55fb/09/13/23/205914-3c3ed819-109a-40a4-85ff-65e4ed7500b7.pdf",
+     "v": "https://www.youtube.com/watch?v=3HTbB1Aemt4"
+    },
+    {
+     "d": "2023-08-14",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/d096/09/13/23/205850-b01eb669-1e22-4561-940a-7723ae3f6f98.pdf",
+     "v": "https://youtu.be/Fq7Z-tfHqL8"
+    },
+    {
+     "d": "2023-07-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/b276/08/16/23/131857-bda53847-3e67-4c91-83f1-2bd30e76bc9b.pdf",
+     "v": "https://youtu.be/xFMuQKhjEWs"
+    }
+   ]
+  },
+  {
+   "y": "2022–23",
+   "r": [
+    {
+     "d": "2023-06-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/b3d4/07/11/23/205054-cbbce6f3-a7ea-48e5-a340-01a29cbe8ea5.pdf",
+     "v": "https://youtu.be/JZb25v6YjF4"
+    },
+    {
+     "d": "2023-05-08",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/faa5/06/13/23/201856-f7e7cc1b-d7cf-449f-aec9-68c65322cb80.pdf",
+     "v": "https://youtu.be/nh9RkPIeCp4"
+    },
+    {
+     "d": "2023-04-24",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/a285/05/17/23/144943-d090f55f-4a75-42eb-87e4-f3eec317e858.pdf",
+     "v": "https://youtu.be/ksepkhTXMHE"
+    },
+    {
+     "d": "2023-04-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/47b0/05/17/23/144812-bb61f1e5-c740-4991-b6a0-77e4832db325.pdf",
+     "v": "https://youtu.be/nRFGJZRxmYA"
+    },
+    {
+     "d": "2023-03-20",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/313d/04/12/23/200122-efd0d47e-cd18-4378-9ae4-491e7d1c3952.pdf",
+     "v": "https://youtu.be/GCBIhW1nnFo"
+    },
+    {
+     "d": "2023-02-27",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/72df/04/12/23/200104-df2702f4-049d-4524-8823-e13084f4b99a.pdf",
+     "v": "https://youtu.be/aRdpDLTlwDE"
+    },
+    {
+     "d": "2023-02-13",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/f6ae/04/12/23/200042-cb4e141a-14ec-4c39-9042-4d872c35fa07.pdf",
+     "v": "https://youtu.be/JBJ9wsVKtBU"
+    },
+    {
+     "d": "2023-01-23",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/f235/02/17/23/220535-14caccb7-042f-4515-9148-bc959ecec69b.pdf",
+     "v": "https://youtu.be/j5D6HA_8q-E"
+    },
+    {
+     "d": "2023-01-09",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/625b/02/17/23/220518-ceea5649-740c-4570-af09-524e8c78d48e.pdf",
+     "v": "https://youtu.be/5EmZs81Q6hY"
+    },
+    {
+     "d": "2022-12-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/1b70/01/11/23/174705-4d40cb32-5516-41f7-9635-09723ad3ca6e.pdf",
+     "v": "https://youtu.be/m82Qqfl17Zo"
+    },
+    {
+     "d": "2022-11-14",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/7d1f/12/14/22/205001-f8643f09-ae2a-4f09-a04e-5d2913d11da7.pdf",
+     "v": "https://youtu.be/4Ik9TSitbuQ"
+    },
+    {
+     "d": "2022-10-10",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/257e/11/29/22/144124-7a92a74f-0332-4054-86ea-dd722c872670.pdf",
+     "v": "https://youtu.be/snxms1s8lbc"
+    },
+    {
+     "d": "2022-09-19",
+     "t": "RNR hearing",
+     "m": "https://4.files.edl.io/e1b1/10/12/22/161401-6c6aab93-17c9-4043-9031-0fc34c47a6cc.pdf"
+    },
+    {
+     "d": "2022-09-19",
+     "t": "Budget hearing",
+     "m": "https://4.files.edl.io/4ecc/10/12/22/161456-5fb9ca7f-fd7b-4bc6-bbba-8c6236955d2b.pdf",
+     "v": "https://youtu.be/eKAFLNuImjk"
+    },
+    {
+     "d": "2022-09-12",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/0cc4/10/12/22/161343-653d80bb-8140-4a41-8cd8-fcdcee598952.pdf",
+     "v": "https://youtu.be/UCa1FAb_7aI"
+    },
+    {
+     "d": "2022-08-22",
+     "t": "Special meeting",
+     "m": "https://4.files.edl.io/a0ee/09/13/22/202307-7bd8a945-c979-4bba-b9f8-4e53d19c2aad.pdf",
+     "v": "https://youtu.be/e83ZPjZCq_8"
+    },
+    {
+     "d": "2022-08-08",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/679b/09/13/22/202147-c264d884-267b-404a-a033-70fcea4320c5.pdf",
+     "v": "https://youtu.be/RbbVpQFTUpg"
+    },
+    {
+     "d": "2022-07-11",
+     "t": "Regular meeting",
+     "m": "https://4.files.edl.io/a969/08/10/22/150638-8764f746-786f-4c51-b123-37a39668d094.pdf",
+     "v": "https://youtu.be/IOA2p8wOoTE"
+    }
+   ]
+  }
+ ]
+}
