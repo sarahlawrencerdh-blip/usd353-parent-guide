@@ -142,9 +142,30 @@ body.es [data-l="es"]{display:revert}
 .feed .askh svg{color:#1877f2}
 .feed select{width:100%;font:500 15px Inter,sans-serif;padding:10px;border:1px solid var(--line);border-radius:10px;background:#faf8f4;color:var(--ink)}
 #fbout iframe{display:block;margin:8px auto 0;border:0;border-radius:10px;max-width:100%}
+
+.agree{position:fixed;inset:0;z-index:999;background:rgba(20,10,10,.55);display:flex;align-items:center;justify-content:center;padding:18px}
+.agree[hidden]{display:none}
+.agree .box{background:#fff;border-radius:16px;max-width:440px;width:100%;max-height:88vh;overflow:auto;padding:22px 20px 18px;box-shadow:0 12px 40px rgba(0,0,0,.25)}
+.agree h2{margin:0 0 10px;font-size:1.2rem;color:#9b2a2b}
+.agree p{margin:0 0 10px;font-size:.95rem;line-height:1.45;color:#2b2523}
+.agree .agrow{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:14px}
+.agree .ok{flex:1;background:#9b2a2b;color:#fff;border:0;border-radius:999px;padding:13px 16px;font-size:1rem;font-weight:600;cursor:pointer}
+.agree .lng{background:none;border:1px solid #d9cfc9;border-radius:999px;padding:11px 14px;font-size:.9rem;cursor:pointer;color:#2b2523}
+body.agreeopen{overflow:hidden}
 </style>
 </head>
 <body>
+<div class="agree" id="agree" role="dialog" aria-modal="true" aria-labelledby="agreeh" hidden><div class="box">
+<h2 id="agreeh"><span data-l="en">Before you continue</span><span data-l="es">Antes de continuar</span></h2>
+<p data-l="en">This is an independent resource made by a parent. It is <b>not run by, affiliated with or endorsed by USD 353</b>.</p>
+<p data-l="es">Este es un recurso independiente hecho por una madre de familia. <b>No es administrado, afiliado ni respaldado por USD 353</b>.</p>
+<p data-l="en">The information here may be incomplete, out of date or inaccurate. It is not legal advice. Always check the official board policy, handbook or the district before relying on it.</p>
+<p data-l="es">La información puede estar incompleta, desactualizada o ser incorrecta. No es asesoría legal. Siempre verifique la política oficial, el manual o con el distrito antes de basarse en ella.</p>
+<p data-l="en">By using this site, you agree that you use it at your own risk and that the site's creator is not responsible or liable for any decision, action or outcome based on it.</p>
+<p data-l="es">Al usar este sitio, usted acepta que lo usa bajo su propio riesgo y que la creadora del sitio no es responsable de ninguna decisión, acción o resultado basado en él.</p>
+<div class="agrow"><button type="button" class="lng" id="agreelang"><span data-l="en">Español</span><span data-l="es">English</span></button><button type="button" class="ok" id="agreeok"><span data-l="en">I understand and agree</span><span data-l="es">Entiendo y acepto</span></button></div>
+</div></div>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <symbol id="i-home" viewBox="0 0 24 24"><path d="M5 12H3l9-9 9 9h-2M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"/></symbol>
 <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13M12 6v13M21 6v13"/></symbol>
@@ -503,6 +524,11 @@ function showFB(){const u=fbp.value;fbl.href=u;const w=Math.max(180,Math.min(500
   fbo.innerHTML=`<iframe title="Facebook posts" src="${src}" width="${w}" height="640" loading="lazy" allow="encrypted-media; clipboard-write; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;fbOn=true;}
 if(fbp){document.getElementById('fbbtn').addEventListener('click',showFB);fbp.addEventListener('change',()=>{fbl.href=fbp.value;if(fbOn)showFB();});}
 render(false);
+/* ---- daily agreement ---- */
+(function(){const m=document.getElementById('agree');const d=new Date();const today=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();let seen='';try{seen=localStorage.getItem('agreed')||''}catch(e){}
+ if(seen!==today){m.hidden=false;document.body.classList.add('agreeopen');setTimeout(()=>document.getElementById('agreeok').focus(),50);}
+ document.getElementById('agreelang').addEventListener('click',()=>setLang(!document.body.classList.contains('es')));
+ document.getElementById('agreeok').addEventListener('click',()=>{try{localStorage.setItem('agreed',today)}catch(e){}m.hidden=true;document.body.classList.remove('agreeopen');});})();
 </script>
 </body>
 </html>
