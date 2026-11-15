@@ -213,6 +213,8 @@ body.agreeopen{overflow:hidden}
 .mys{background:linear-gradient(135deg,#eef5ff,#f4f0ff);border:1px solid #dfe4f5}
 .qa{flex-wrap:wrap;overflow:visible}
 .howuse{display:flex;gap:10px;align-items:flex-start;background:linear-gradient(135deg,#fff7ec,#fdeee9);border:1px solid #f3dccd;border-radius:14px;padding:11px 12px;margin:0 0 14px}.howuse>.i{flex:none;width:30px;height:30px;padding:6px;border-radius:9px;background:#fff;color:#d0573f}.howuse p{margin:0;font-size:14px;line-height:1.45;color:#4a4740}.howuse b{display:block;color:var(--red-d);font-size:13.5px;margin-bottom:1px}.howuse a{font-weight:600;white-space:nowrap}
+.hhi{display:none;margin:-4px 0 12px;font-size:15px;line-height:1.4;color:rgba(255,255,255,.92)}.hhi b{color:#fff}body[data-page="home"] .hhi{display:block}
+.herocard{margin-top:14px}
 </style>
 </head>
 <body>
@@ -261,6 +263,7 @@ body.agreeopen{overflow:hidden}
 <header><div class="wrap">
   <div class="top"><div class="kick"><span data-l="en">Independent resource · Not an official district site</span><span data-l="es">Recurso independiente · Sitio no oficial del distrito</span></div><button type="button" class="lang" id="langbtn" lang="es">Español</button></div>
   <h1><span data-l="en">A Parent's Guide to USD 353</span><span data-l="es">Guía para padres de USD 353</span></h1>
+  <p class="hhi"><b><span data-l="en">Welcome, parents!</span><span data-l="es">¡Bienvenidos, padres!</span></b> <span data-l="en">Plain-language answers, each linked to its official source.</span><span data-l="es">Respuestas sencillas, cada una con su fuente oficial.</span></p>
   <label class="sb"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="What do you need help with?" autocomplete="off" aria-label="Search the guide"></label>
   <div class="tryq" id="tryq"><span data-l="en">Try:</span><span data-l="es">Pruebe:</span><button type="button" data-q="sick|enfermo"><span data-l="en">My child is sick</span><span data-l="es">Mi hijo está enfermo</span></button><button type="button" data-q="pick up early|recoger temprano"><span data-l="en">Pick up early</span><span data-l="es">Recoger temprano</span></button><button type="button" data-q="board meeting|reunión de la junta"><span data-l="en">Board meeting</span><span data-l="es">Reunión de la junta</span></button><button type="button" data-q="bullying|acoso"><span data-l="en">Bullying</span><span data-l="es">Acoso</span></button></div>
 </div></header>
@@ -274,7 +277,6 @@ body.agreeopen{overflow:hidden}
 </div></nav>
 <main class="wrap">
 <div id="pages"><section data-page="home" data-title="Home">
-<div class="hello"><div class="hello-ic"><svg class="i"><use href="#i-heart"/></svg></div><div><h2><span data-l="en">Welcome, parents!</span><span data-l="es">¡Bienvenidos, padres!</span></h2><p><span data-l="en">Plain-language answers, each linked to its official source.</span><span data-l="es">Respuestas sencillas, cada una con su fuente oficial.</span></p></div></div>
 <div class="herocard"><a class="hc-top" href="#howto"><svg class="i"><use href="#i-sparkle"/></svg><div><b><span data-l="en">Step-by-step help</span><span data-l="es">Ayuda paso a paso</span></b><small><span data-l="en">Absences, pick-up, complaints, records and more</span><span data-l="es">Ausencias, recoger temprano, quejas, expedientes y más</span></small></div><span class="hc-go">→</span></a>
 <div class="hc-links"><a href="#g-absence"><span data-l="en">Report an absence</span><span data-l="es">Reportar una ausencia</span></a><a href="#g-pickup"><span data-l="en">Pick up early</span><span data-l="es">Recoger temprano</span></a><a href="#g-complaint"><span data-l="en">Make a complaint</span><span data-l="es">Presentar una queja</span></a><a href="#howto"><span data-l="en">See all guides</span><span data-l="es">Ver todas las guías</span></a></div></div>
 <div class="lbl"><span data-l="en">Also popular</span><span data-l="es">También popular</span></div>
@@ -570,7 +572,7 @@ paintMeetings();
 fetch('meetings.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Array.isArray(j.meetings)&&j.meetings.length){DATA.meetings=j.meetings;paintMeetings();}}).catch(()=>{});
 const mt=document.getElementById('meetlist'); if(mt){mt.addEventListener('click',e=>{const b=e.target.closest('button[data-y]');if(!b)return;mt.querySelectorAll('button[data-y]').forEach(x=>x.setAttribute('aria-pressed',x===b));mt.querySelectorAll('[data-yb]').forEach(x=>x.hidden=x.dataset.yb!==b.dataset.y);});}
 const DYN={topics:'policies',all:'policies',recent:'policies',forms:'policies',teachers:'policies',staff:'policies'};
-function show(page){PAGES.forEach(s=>s.style.display=s.dataset.page===page?'block':'none');}
+function show(page){document.body.dataset.page=page;PAGES.forEach(s=>s.style.display=s.dataset.page===page?'block':'none');}
 function nav(v){document.querySelectorAll('nav.bar a').forEach(a=>a.toggleAttribute('aria-current',a.dataset.v===v));}
 function render(scroll){
   const term=q.value.trim();
