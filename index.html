@@ -213,8 +213,9 @@ body.agreeopen{overflow:hidden}
 .mys{background:linear-gradient(135deg,#eef5ff,#f4f0ff);border:1px solid #dfe4f5}
 .qa{flex-wrap:wrap;overflow:visible}
 .howuse{display:flex;gap:10px;align-items:flex-start;background:linear-gradient(135deg,#fff7ec,#fdeee9);border:1px solid #f3dccd;border-radius:14px;padding:11px 12px;margin:0 0 14px}.howuse>.i{flex:none;width:30px;height:30px;padding:6px;border-radius:9px;background:#fff;color:#d0573f}.howuse p{margin:0;font-size:14px;line-height:1.45;color:#4a4740}.howuse b{display:block;color:var(--red-d);font-size:13.5px;margin-bottom:1px}.howuse a{font-weight:600;white-space:nowrap}
-.hhi{display:none;margin:-4px 0 12px;font-size:15px;line-height:1.4;color:rgba(255,255,255,.92)}.hhi b{color:#fff}body[data-page="home"] .hhi{display:block}
+.hhi{display:none;gap:12px;align-items:flex-start;background:linear-gradient(135deg,#fff7ec,#fdeee9);border-radius:16px;padding:13px 14px;margin:2px 0 12px;color:#4a4740;font-size:14.5px;line-height:1.45}.hhi>.i{flex:none;width:38px;height:38px;padding:9px;border-radius:12px;background:#fff;color:#d0573f;box-shadow:0 1px 3px rgba(0,0,0,.06)}.hhi b{display:block;font-size:18px;color:var(--red-d);margin-bottom:2px}body[data-page="home"] .hhi{display:flex}
 .herocard{margin-top:14px}
+.hhi p{margin:0 0 8px}.hhi-how{font-weight:700;color:var(--red-d);font-size:13.5px;margin-bottom:4px}.hhi ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}.hhi li{display:flex;gap:8px;align-items:flex-start;font-size:14px}.hhi li .i{flex:none;width:18px;height:18px;margin-top:1px;color:#d0573f}.hhi li b{display:inline;font-size:inherit;color:var(--ink);margin:0}
 </style>
 </head>
 <body>
@@ -263,7 +264,11 @@ body.agreeopen{overflow:hidden}
 <header><div class="wrap">
   <div class="top"><div class="kick"><span data-l="en">Independent resource · Not an official district site</span><span data-l="es">Recurso independiente · Sitio no oficial del distrito</span></div><button type="button" class="lang" id="langbtn" lang="es">Español</button></div>
   <h1><span data-l="en">A Parent's Guide to USD 353</span><span data-l="es">Guía para padres de USD 353</span></h1>
-  <p class="hhi"><b><span data-l="en">Welcome, parents!</span><span data-l="es">¡Bienvenidos, padres!</span></b> <span data-l="en">Plain-language answers, each linked to its official source.</span><span data-l="es">Respuestas sencillas, cada una con su fuente oficial.</span></p>
+  <div class="hhi"><svg class="i"><use href="#i-heart"/></svg><div><b><span data-l="en">Welcome, parents!</span><span data-l="es">¡Bienvenidos, padres!</span></b><p><span data-l="en">This guide helps USD 353 families understand school rules, parent rights and everyday info in plain language. Every answer links to the board policy, handbook or district page it comes from.</span><span data-l="es">Esta guía ayuda a las familias de USD 353 a entender las reglas escolares, los derechos de los padres y la información diaria en lenguaje sencillo. Cada respuesta tiene un enlace a la política de la junta, el manual o la página del distrito de donde viene.</span></p><div class="hhi-how"><span data-l="en">How to use it:</span><span data-l="es">Cómo usarla:</span></div><ul>
+<li><svg class="i"><use href="#i-search"/></svg><span data-l="en"><b>Search</b> with your own words, or tap a “Try” button.</span><span data-l="es"><b>Busque</b> con sus propias palabras o toque un botón de “Pruebe”.</span></li>
+<li><svg class="i"><use href="#i-sparkle"/></svg><span data-l="en"><b>Step-by-step help</b> walks you through absences, pick-up, complaints and more.</span><span data-l="es"><b>Ayuda paso a paso</b> le guía en ausencias, recoger temprano, quejas y más.</span></li>
+<li><svg class="i"><use href="#i-home"/></svg><span data-l="en"><b>My schools:</b> tap your kids’ schools to see hours, phone numbers and handbooks.</span><span data-l="es"><b>Mis escuelas:</b> toque las escuelas de sus hijos para ver horarios, teléfonos y manuales.</span></li>
+<li><svg class="i"><use href="#i-book"/></svg><span data-l="en"><b>The bar at the bottom</b> takes you to policies, the board, everyday info, sports and test scores.</span><span data-l="es"><b>La barra de abajo</b> lo lleva a políticas, la junta, información diaria, deportes y resultados de exámenes.</span></li></ul></div></div>
   <label class="sb"><svg class="i"><use href="#i-search"/></svg><input id="q" type="search" placeholder="What do you need help with?" autocomplete="off" aria-label="Search the guide"></label>
   <div class="tryq" id="tryq"><span data-l="en">Try:</span><span data-l="es">Pruebe:</span><button type="button" data-q="sick|enfermo"><span data-l="en">My child is sick</span><span data-l="es">Mi hijo está enfermo</span></button><button type="button" data-q="pick up early|recoger temprano"><span data-l="en">Pick up early</span><span data-l="es">Recoger temprano</span></button><button type="button" data-q="board meeting|reunión de la junta"><span data-l="en">Board meeting</span><span data-l="es">Reunión de la junta</span></button><button type="button" data-q="bullying|acoso"><span data-l="en">Bullying</span><span data-l="es">Acoso</span></button></div>
 </div></header>
@@ -572,7 +577,7 @@ paintMeetings();
 fetch('meetings.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Array.isArray(j.meetings)&&j.meetings.length){DATA.meetings=j.meetings;paintMeetings();}}).catch(()=>{});
 const mt=document.getElementById('meetlist'); if(mt){mt.addEventListener('click',e=>{const b=e.target.closest('button[data-y]');if(!b)return;mt.querySelectorAll('button[data-y]').forEach(x=>x.setAttribute('aria-pressed',x===b));mt.querySelectorAll('[data-yb]').forEach(x=>x.hidden=x.dataset.yb!==b.dataset.y);});}
 const DYN={topics:'policies',all:'policies',recent:'policies',forms:'policies',teachers:'policies',staff:'policies'};
-function show(page){document.body.dataset.page=page;PAGES.forEach(s=>s.style.display=s.dataset.page===page?'block':'none');}
+function show(page){document.body.dataset.page=page||(q.value.trim()?document.body.dataset.page:'x');PAGES.forEach(s=>s.style.display=s.dataset.page===page?'block':'none');}
 function nav(v){document.querySelectorAll('nav.bar a').forEach(a=>a.toggleAttribute('aria-current',a.dataset.v===v));}
 function render(scroll){
   const term=q.value.trim();
