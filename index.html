@@ -156,14 +156,14 @@ body.agreeopen{overflow:hidden}
 </head>
 <body>
 <div class="agree" id="agree" role="dialog" aria-modal="true" aria-labelledby="agreeh" hidden><div class="box">
-<h2 id="agreeh"><span data-l="en">Before you continue</span><span data-l="es">Antes de continuar</span></h2>
-<p data-l="en">This is an independent resource made by a parent. It is <b>not run by, affiliated with or endorsed by USD 353</b>.</p>
-<p data-l="es">Este es un recurso independiente hecho por una madre de familia. <b>No es administrado, afiliado ni respaldado por USD 353</b>.</p>
-<p data-l="en">The information here may be incomplete, out of date or inaccurate. It is not legal advice. Always check the official board policy, handbook or the district before relying on it.</p>
-<p data-l="es">La información puede estar incompleta, desactualizada o ser incorrecta. No es asesoría legal. Siempre verifique la política oficial, el manual o con el distrito antes de basarse en ella.</p>
-<p data-l="en">By using this site, you agree that you use it at your own risk and that the site's creator is not responsible or liable for any decision, action or outcome based on it.</p>
-<p data-l="es">Al usar este sitio, usted acepta que lo usa bajo su propio riesgo y que la creadora del sitio no es responsable de ninguna decisión, acción o resultado basado en él.</p>
-<div class="agrow"><button type="button" class="lng" id="agreelang"><span data-l="en">Español</span><span data-l="es">English</span></button><button type="button" class="ok" id="agreeok"><span data-l="en">I understand and agree</span><span data-l="es">Entiendo y acepto</span></button></div>
+<h2 id="agreeh"><span data-l="en">Before You Continue</span><span data-l="es">Antes de continuar</span></h2>
+<p data-l="en">This website is an independent informational resource. It is <b>not operated by, affiliated with or endorsed by Wellington USD 353</b>.</p>
+<p data-l="es">Este sitio web es un recurso informativo independiente. <b>No es operado, afiliado ni respaldado por Wellington USD 353</b>.</p>
+<p data-l="en">Content is provided for general informational purposes only and does not constitute legal advice. Information may be incomplete, outdated or inaccurate. Please verify all information against official board policy, school handbooks or the district before relying on it.</p>
+<p data-l="es">El contenido se ofrece solo con fines informativos generales y no constituye asesoría legal. La información puede estar incompleta, desactualizada o ser incorrecta. Verifique toda la información con la política oficial de la junta, los manuales escolares o el distrito antes de basarse en ella.</p>
+<p data-l="en">By continuing to use this site, you acknowledge that you do so at your own risk and agree that the site owner shall not be held liable for any decision, action or outcome arising from its use.</p>
+<p data-l="es">Al continuar usando este sitio, usted reconoce que lo hace bajo su propio riesgo y acepta que el propietario del sitio no será responsable de ninguna decisión, acción o resultado derivado de su uso.</p>
+<div class="agrow"><button type="button" class="lng" id="agreelang"><span data-l="en">Español</span><span data-l="es">English</span></button><button type="button" class="ok" id="agreeok"><span data-l="en">I Acknowledge and Agree</span><span data-l="es">Reconozco y acepto</span></button></div>
 </div></div>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -525,10 +525,10 @@ function showFB(){const u=fbp.value;fbl.href=u;const w=Math.max(180,Math.min(500
 if(fbp){document.getElementById('fbbtn').addEventListener('click',showFB);fbp.addEventListener('change',()=>{fbl.href=fbp.value;if(fbOn)showFB();});}
 render(false);
 /* ---- daily agreement ---- */
-(function(){const m=document.getElementById('agree');const d=new Date();const today=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();let seen='';try{seen=localStorage.getItem('agreed')||''}catch(e){}
+(function(){const m=document.getElementById('agree');const d=new Date();const today=d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();let seen='';try{seen=localStorage.getItem('agreed2')||''}catch(e){}
  if(seen!==today){m.hidden=false;document.body.classList.add('agreeopen');setTimeout(()=>document.getElementById('agreeok').focus(),50);}
  document.getElementById('agreelang').addEventListener('click',()=>setLang(!document.body.classList.contains('es')));
- document.getElementById('agreeok').addEventListener('click',()=>{try{localStorage.setItem('agreed',today)}catch(e){}m.hidden=true;document.body.classList.remove('agreeopen');});})();
+ document.getElementById('agreeok').addEventListener('click',()=>{try{localStorage.setItem('agreed2',today)}catch(e){}m.hidden=true;document.body.classList.remove('agreeopen');});})();
 </script>
 </body>
 </html>
