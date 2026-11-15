@@ -201,11 +201,23 @@ body.agreeopen{overflow:hidden}
 .mysh{font-weight:600;font-size:15px;margin:0 0 8px}.mysh small{font-weight:400;color:var(--muted);font-size:12.5px;margin-left:4px}
 .pickchips{display:flex;flex-wrap:wrap;gap:6px}.pickchips button{font:inherit;font-size:13.5px;padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer}.pickchips button.on{background:var(--red);border-color:var(--red);color:#fff}.pickchips button.on::before{content:"✓ "}
 .mycard{background:#fff;border:1px solid var(--line);border-radius:12px;margin:10px 0 0;overflow:hidden}.mycard>summary{display:flex;align-items:center;gap:10px;padding:11px 12px;cursor:pointer;font-weight:600;list-style:none}.mycard>summary::-webkit-details-marker{display:none}.mycard>summary svg{width:20px;height:20px;color:var(--red)}.mycard>summary span{flex:1}.mycard[open]>summary svg:last-child{transform:rotate(180deg)}.mycard .school{padding:0 12px}
+.hello{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(135deg,#fff7ec,#fdeee9);border:1px solid #f3dccd;border-radius:16px;padding:14px 14px 12px;margin:2px 0 12px}
+.hello-ic{flex:none;width:40px;height:40px;border-radius:12px;background:#fff;display:grid;place-items:center;box-shadow:0 1px 3px rgba(0,0,0,.06)}.hello-ic .i{width:22px;height:22px;color:#d0573f}
+.hello h2{font-size:18px;margin:0 0 3px;color:var(--red-d)}.hello p{margin:0;font-size:14px;line-height:1.45;color:#4a4740}
+.herocard{background:linear-gradient(135deg,#a32d2d,#c8553d);border-radius:18px;padding:14px;color:#fff;box-shadow:0 6px 18px rgba(163,45,45,.22);margin-bottom:6px}
+.hc-top{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}.hc-top>.i{flex:none;width:44px;height:44px;padding:10px;border-radius:14px;background:rgba(255,255,255,.18);color:#fff}
+.hc-top b{display:block;font-size:18px}.hc-top small{display:block;font-size:13px;opacity:.9;margin-top:2px}.hc-top>div{flex:1}.hc-go{font-size:22px;font-weight:700}
+.hc-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.hc-links a{font-size:13.5px;font-weight:500;padding:7px 12px;border-radius:999px;background:#fff;color:var(--red-d);text-decoration:none}.hc-links a:last-child{background:rgba(255,255,255,.18);color:#fff;border:1px solid rgba(255,255,255,.5)}
+.agree-hi{font-size:15px;color:#4a4740}
+#upcoming a.k-board span,#upcoming a.k-board b{font-weight:400;color:var(--muted)}#upcoming a.k-board{font-size:14px}
+.mys{background:linear-gradient(135deg,#eef5ff,#f4f0ff);border:1px solid #dfe4f5}
+.qa{flex-wrap:wrap;overflow:visible}
 </style>
 </head>
 <body>
 <div class="agree" id="agree" role="dialog" aria-modal="true" aria-labelledby="agreeh" hidden><div class="box">
-<h2 id="agreeh"><span data-l="en">Before You Continue</span><span data-l="es">Antes de continuar</span></h2>
+<h2 id="agreeh"><span data-l="en">Welcome!</span><span data-l="es">¡Bienvenidos!</span></h2>
+<p class="agree-hi" data-l="en">We're glad you're here. This guide puts USD 353 policies and handbooks into plain language. Please read this short note first.</p><p class="agree-hi" data-l="es">Nos alegra que esté aquí. Esta guía explica las políticas y manuales de USD 353 en lenguaje sencillo. Por favor lea primero esta breve nota.</p>
 <p data-l="en">This website is an independent informational resource. It is <b>not operated by, affiliated with or endorsed by Wellington USD 353</b>.</p>
 <p data-l="es">Este sitio web es un recurso informativo independiente. <b>No es operado, afiliado ni respaldado por Wellington USD 353</b>.</p>
 <p data-l="en">Content is provided for general informational purposes only and does not constitute legal advice. Information may be incomplete, outdated or inaccurate. Please verify all information against official board policy, school handbooks or the district before relying on it.</p>
@@ -261,16 +273,18 @@ body.agreeopen{overflow:hidden}
 </div></nav>
 <main class="wrap">
 <div id="pages"><section data-page="home" data-title="Home">
-<div class="mys" id="mys"><div class="mysh"><span data-l="en">My schools</span><span data-l="es">Mis escuelas</span> <small><span data-l="en">Tap all that apply</span><span data-l="es">Toque todas las que apliquen</span></small></div><div class="pickchips" id="schoolpick"><button type="button" data-k="whs">Wellington High</button><button type="button" data-k="wms">Wellington Middle</button><button type="button" data-k="eis">Eisenhower</button><button type="button" data-k="ken">Kennedy</button><button type="button" data-k="lin">Lincoln</button><button type="button" data-k="was">Washington</button></div><div id="mysout"></div></div>
+<div class="hello"><div class="hello-ic"><svg class="i"><use href="#i-heart"/></svg></div><div><h2><span data-l="en">Welcome, parents!</span><span data-l="es">¡Bienvenidos, padres!</span></h2><p><span data-l="en">Quick, plain-language answers to school questions. Each answer links to the board policy, handbook or district page it comes from.</span><span data-l="es">Respuestas rápidas y sencillas a preguntas escolares. Cada respuesta tiene un enlace a la política de la junta, el manual o la página del distrito de donde viene.</span></p></div></div>
+<div class="herocard"><a class="hc-top" href="#howto"><svg class="i"><use href="#i-sparkle"/></svg><div><b><span data-l="en">Step-by-step help</span><span data-l="es">Ayuda paso a paso</span></b><small><span data-l="en">Absences, pick-up, complaints, records and more</span><span data-l="es">Ausencias, recoger temprano, quejas, expedientes y más</span></small></div><span class="hc-go">→</span></a>
+<div class="hc-links"><a href="#g-absence"><span data-l="en">Report an absence</span><span data-l="es">Reportar una ausencia</span></a><a href="#g-pickup"><span data-l="en">Pick up early</span><span data-l="es">Recoger temprano</span></a><a href="#g-complaint"><span data-l="en">Make a complaint</span><span data-l="es">Presentar una queja</span></a><a href="#howto"><span data-l="en">See all guides</span><span data-l="es">Ver todas las guías</span></a></div></div>
+<div class="lbl"><span data-l="en">Also popular</span><span data-l="es">También popular</span></div>
+<div class="qa">
+<a href="#food"><span data-l="en">Apply for free meals</span><span data-l="es">Solicitar comidas gratis</span></a><a href="#ask"><span data-l="en">Ask a policy question</span><span data-l="es">Preguntar sobre políticas</span></a><a href="#notify"><span data-l="en">Get meeting notices</span><span data-l="es">Avisos de reuniones</span></a>
+</div>
+<div class="mys" id="mys"><div class="mysh"><span data-l="en">My schools</span><span data-l="es">Mis escuelas</span> <small><span data-l="en">Tap your kids’ schools to see hours, phone numbers and handbooks</span><span data-l="es">Toque las escuelas de sus hijos para ver horarios, teléfonos y manuales</span></small></div><div class="pickchips" id="schoolpick"><button type="button" data-k="whs">Wellington High</button><button type="button" data-k="wms">Wellington Middle</button><button type="button" data-k="eis">Eisenhower</button><button type="button" data-k="ken">Kennedy</button><button type="button" data-k="lin">Lincoln</button><button type="button" data-k="was">Washington</button></div><div id="mysout"></div></div>
 <div class="lbl"><span data-l="en">Coming up</span><span data-l="es">Próximamente</span></div>
 <div class="new" id="upcoming"></div>
-<div class="lbl"><span data-l="en">Quick answers</span><span data-l="es">Respuestas rápidas</span></div>
-<div class="qa">
-<a href="#g-absence"><span data-l="en">Report an absence</span><span data-l="es">Reportar una ausencia</span></a><a href="#food"><span data-l="en">Apply for free meals</span><span data-l="es">Solicitar comidas gratis</span></a><a href="#ask"><span data-l="en">Ask a policy question</span><span data-l="es">Preguntar sobre políticas</span></a><a href="#notify"><span data-l="en">Get meeting notices</span><span data-l="es">Avisos de reuniones</span></a>
-</div>
-<div class="lbl"><span data-l="en">Explore</span><span data-l="es">Explorar</span></div>
+<div class="lbl"><span data-l="en">More to explore</span><span data-l="es">Más para explorar</span></div>
 <div class="tiles">
-<a class="tile" href="#howto"><svg class="i"><use href="#i-sparkle"/></svg><b><span data-l="en">How Do I…?</span><span data-l="es">¿Cómo hago…?</span></b><span><span data-l="en">Step-by-step guides</span><span data-l="es">Guías paso a paso</span></span></a>
 <a class="tile" href="#policies"><svg class="i"><use href="#i-book"/></svg><b><span data-l="en">Policies and Handbooks</span><span data-l="es">Políticas y manuales</span></b><span><span data-l="en">Ask or search by topic</span><span data-l="es">Pregunte o busque por tema</span></span></a>
 <a class="tile" href="#board"><svg class="i"><use href="#i-gavel"/></svg><b><span data-l="en">School Board</span><span data-l="es">Junta escolar</span></b><span><span data-l="en">Meetings, minutes, packets</span><span data-l="es">Reuniones, actas, paquetes</span></span></a>
 <a class="tile" href="#contact"><svg class="i"><use href="#i-phone"/></svg><b><span data-l="en">Who to Contact</span><span data-l="es">A quién contactar</span></b><span><span data-l="en">Who to call first</span><span data-l="es">A quién llamar primero</span></span></a>
