@@ -216,6 +216,20 @@ body.agreeopen{overflow:hidden}
 .hhi{display:none;gap:12px;align-items:flex-start;background:linear-gradient(135deg,#fff7ec,#fdeee9);border-radius:16px;padding:13px 14px;margin:2px 0 12px;color:#4a4740;font-size:14.5px;line-height:1.45}.hhi>.i{flex:none;width:38px;height:38px;padding:9px;border-radius:12px;background:#fff;color:#d0573f;box-shadow:0 1px 3px rgba(0,0,0,.06)}.hhi b{display:block;font-size:18px;color:var(--red-d);margin-bottom:2px}body[data-page="home"] .hhi{display:flex}
 .herocard{margin-top:14px}
 .hhi p{margin:0 0 8px}.hhi-how{font-weight:700;color:var(--red-d);font-size:13.5px;margin-bottom:4px}.hhi ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}.hhi li{display:flex;gap:8px;align-items:flex-start;font-size:14px}.hhi li .i{flex:none;width:18px;height:18px;margin-top:1px;color:#d0573f}.hhi li b{display:inline;font-size:inherit;color:var(--ink);margin:0}
+#upcoming a.up{display:flex;gap:12px;align-items:center;padding:10px 12px}
+#upcoming .dt{flex:none;width:52px;border-radius:12px;text-align:center;padding:5px 0 4px;background:#f3efe8;line-height:1.05}
+#upcoming .dt small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.04em;color:var(--muted)}#upcoming .dt b{display:block;font-size:21px;font-weight:700;color:var(--ink);margin:1px 0}
+#upcoming .ub{display:flex;flex-direction:column;gap:3px;min-width:0}
+#upcoming .tag{display:inline-flex;align-items:center;gap:5px;align-self:flex-start;font-size:12px;font-weight:700;padding:3px 9px 3px 7px;border-radius:999px}#upcoming .tag .i{width:14px;height:14px}
+#upcoming .det{font-size:14.5px;color:var(--ink);line-height:1.35}
+#upcoming .k-off .dt{background:#fff1dc}#upcoming .k-off .dt small{color:#8a4b00}#upcoming .k-off .tag{background:#fff1dc;color:#8a4b00}
+#upcoming .k-board .dt{background:#e6effb}#upcoming .k-board .dt small{color:#1f5fae}#upcoming .k-board .tag{background:#e6effb;color:#1f5fae}
+#upcoming .k-special .dt{background:#fbe6e6}#upcoming .k-special .dt small{color:#a32323}#upcoming .k-special .tag{background:#fbe6e6;color:#a32323}#upcoming .k-special .det{font-weight:600}
+#upcoming .k-ev .dt{background:#e5f4e6}#upcoming .k-ev .dt small{color:#2b7a34}#upcoming .k-ev .tag{background:#e5f4e6;color:#2b7a34}
+#upcoming a.k-board span,#upcoming a.k-board b{font-weight:inherit;color:inherit}#upcoming a.k-board{font-size:inherit}
+.lblrow{display:flex;justify-content:space-between;align-items:baseline}.lblrow a{font-size:13.5px;font-weight:600;text-decoration:none;color:var(--link)}
+#upcoming .tag svg.i{width:14px!important;height:14px!important;padding:0!important;margin:0!important;background:none!important;border-radius:0!important;color:currentColor!important;flex:none}
+#upcoming a.k-board .dt b,#upcoming a.k-board .tag{font-weight:700}#upcoming a.k-board .dt small{font-weight:700;color:#1f5fae}#upcoming a.k-board .tag{color:#1f5fae}#upcoming a.k-board .det{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -260,6 +274,7 @@ body.agreeopen{overflow:hidden}
 <symbol id="i-social" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
 <symbol id="i-insta" viewBox="0 0 24 24"><path d="M4 8a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0M16.5 7.5v.01"/></symbol>
 <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M16 18a2 2 0 0 1 2 2 2 2 0 0 1 2-2 2 2 0 0 1-2-2 2 2 0 0 1-2 2M16 6a2 2 0 0 1 2 2 2 2 0 0 1 2-2 2 2 0 0 1-2-2 2 2 0 0 1-2 2M9 18a6 6 0 0 1 6-6 6 6 0 0 1-6-6 6 6 0 0 1-6 6 6 6 0 0 1 6 6"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></symbol>
 </svg>
 <header><div class="wrap">
   <div class="top"><div class="kick"><span data-l="en">Independent resource · Not an official district site</span><span data-l="es">Recurso independiente · Sitio no oficial del distrito</span></div><button type="button" class="lang" id="langbtn" lang="es">Español</button></div>
@@ -289,7 +304,7 @@ body.agreeopen{overflow:hidden}
 <a href="#food"><span data-l="en">Apply for free meals</span><span data-l="es">Solicitar comidas gratis</span></a><a href="#ask"><span data-l="en">Ask a policy question</span><span data-l="es">Preguntar sobre políticas</span></a><a href="#notify"><span data-l="en">Get meeting notices</span><span data-l="es">Avisos de reuniones</span></a>
 </div>
 <div class="mys" id="mys"><div class="mysh"><span data-l="en">My schools</span><span data-l="es">Mis escuelas</span> <small><span data-l="en">Tap your kids’ schools to see hours, phone numbers and handbooks</span><span data-l="es">Toque las escuelas de sus hijos para ver horarios, teléfonos y manuales</span></small></div><div class="pickchips" id="schoolpick"><button type="button" data-k="whs">Wellington High</button><button type="button" data-k="wms">Wellington Middle</button><button type="button" data-k="eis">Eisenhower</button><button type="button" data-k="ken">Kennedy</button><button type="button" data-k="lin">Lincoln</button><button type="button" data-k="was">Washington</button></div><div id="mysout"></div></div>
-<div class="lbl"><span data-l="en">Coming up</span><span data-l="es">Próximamente</span></div>
+<div class="lbl lblrow"><span><span data-l="en">Coming up</span><span data-l="es">Próximamente</span></span><a href="#calendar"><span data-l="en">Full calendar →</span><span data-l="es">Calendario completo →</span></a></div>
 <div class="new" id="upcoming"></div>
 <div class="lbl"><span data-l="en">More to explore</span><span data-l="es">Más para explorar</span></div>
 <div class="tiles">
@@ -621,8 +636,16 @@ function paintUpcoming(){const el=document.getElementById('upcoming');if(!el)ret
   SPECIAL.filter(x=>x.d>=today).forEach(x=>items.push({d:x.d,t:es?x.es:x.en,i:'gavel',h:'#board'}));
   const now=new Date();for(let k=0;k<3;k++){const bm=secondMonday(now.getFullYear(),now.getMonth()+k);if(iso(bm)>=today){items.push({d:iso(bm),t:es?'Reunión ordinaria de la junta, 6:00 PM, Oficina Central':'Regular board meeting, 6:00 PM, Central Office',i:'gavel',h:'#board'});break;}}
   items.sort((a,b)=>a.d.localeCompare(b.d));items=items.slice(0,5);
-  const f=d=>new Date(d+'T12:00:00').toLocaleDateString(es?'es-US':'en-US',{weekday:'short',month:'short',day:'numeric'});
-  el.innerHTML=items.length?items.map(x=>`<a class="${x.i==='gavel'?(/Special|especial/.test(x.t)?'k-special':'k-board'):(/^No (school|hay)/.test(x.t)?'k-off':'k-ev')}" href="${x.h||'#calendar'}">${ic(x.i)}<span><b>${f(x.d)}</b> · ${esc(x.t)}</span></a>`).join(''):`<a href="#calendar">${ic('cal')}<span>${es?'Ver el calendario escolar':'See the school calendar'}</span></a>`;}
+  const cap=s=>s?s.charAt(0).toUpperCase()+s.slice(1):s;
+  const kind=x=>{const t=x.t;
+    if(x.i==='gavel'){if(/Special|especial/.test(t))return{k:'k-special',tag:es?'Reunión especial de la junta':'Special board meeting',det:t.replace(/^[^,]*,\s*/,''),ic:'gavel'};
+      return{k:'k-board',tag:es?'Reunión de la junta':'Board meeting',det:es?'6:00 PM · Oficina Central':'6:00 PM · Central Office',ic:'gavel'};}
+    const m=t.match(/^(No school|No hay clases)[:;]?\s*(.*)$/);
+    if(m){let d=m[2].trim();if(/^\(.*\)$/.test(d))d=d.slice(1,-1);return{k:'k-off',tag:es?'No hay clases':'No school',det:cap(d),ic:'cal'};}
+    return{k:'k-ev',tag:es?'Evento escolar':'School event',det:t,ic:'star'};};
+  const dd=new Date(),loc=es?'es-US':'en-US';
+  el.innerHTML=items.length?items.map(x=>{const dt=new Date(x.d+'T12:00:00'),z=kind(x);
+    return `<a class="up ${z.k}" href="${x.h||'#calendar'}"><span class="dt"><small>${dt.toLocaleDateString(loc,{month:'short'}).replace('.','').toUpperCase()}</small><b>${dt.getDate()}</b><small>${dt.toLocaleDateString(loc,{weekday:'short'}).replace('.','')}</small></span><span class="ub"><span class="tag">${ic(z.ic)}${z.tag}</span><span class="det">${esc(z.det)}</span></span></a>`}).join(''):`<a href="#calendar">${ic('cal')}<span>${es?'Ver el calendario escolar':'See the school calendar'}</span></a>`;}
 /* ---- ask a question ---- */
 let KB=null,SAMPLE;
 const STOP=new Set('a an the of to in on for is are can my our we i do does what when how who will be my child kid kids son daughter student students about with if it at or and this that there have has should would could please el la los las de del y o en un una mi mis hijo hija que como cuando puede para por es son se lo le'.split(' '));
