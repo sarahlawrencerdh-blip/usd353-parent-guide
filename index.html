@@ -188,6 +188,15 @@ body.agreeopen{overflow:hidden}
 .nextbox{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 12px 12px 0;padding:12px 14px;margin:0 0 12px}.nextbox>svg{flex:none;width:24px;height:24px;color:var(--red)}.nextbox b{display:block;font-size:16px}.nextbox small{display:block;color:var(--muted);font-size:13px;margin-top:3px;line-height:1.4}
 .specialbox{display:flex;gap:12px;align-items:flex-start;background:#fff7e8;border:1px solid #f0dcb4;border-radius:12px;padding:12px 14px;margin:0 0 12px}.specialbox>svg{flex:none;width:24px;height:24px;color:#7a4d00}.specialbox b{display:block;font-size:16px;color:#7a4d00}.specialbox span{display:block;font-size:15px;line-height:1.4;margin-top:2px}.specialbox small{display:block;color:var(--muted);font-size:12.5px;margin-top:4px}
 .notifybox{background:#eef4fc;border:1px solid #c9daf2;border-radius:12px;padding:12px 14px;margin:0 0 12px}.notifybox b{display:block;font-size:16px;color:#164f94}.notifybox p{margin:4px 0;font-size:14.5px;line-height:1.45}
+.tile[href="#howto"]{--tb:#fff1dc;--tc:#a35a00}.tile[href="#policies"]{--tb:#e6effb;--tc:#1f5fae}.tile[href="#board"]{--tb:#fbe6e6;--tc:#a32323}.tile[href="#contact"]{--tb:#e0f3ef;--tc:#0f6e5a}.tile[href="#rights"]{--tb:#efe9fb;--tc:#5b3fa8}.tile[href="#everyday"]{--tb:#e5f4e6;--tc:#2b7a34}.tile[href="#scores"]{--tb:#e3ecf8;--tc:#164f94}.tile[href="#calendar"]{--tb:#e6effb;--tc:#1f5fae}.tile[href="#bus"]{--tb:#fff1dc;--tc:#a35a00}.tile[href="#food"]{--tb:#e5f4e6;--tc:#2b7a34}.tile[href="#weather"]{--tb:#e0f3ef;--tc:#0f6e5a}.tile[href="#enroll"]{--tb:#efe9fb;--tc:#5b3fa8}.tile[href="#connect"]{--tb:#fbe6e6;--tc:#a32323}
+.tiles .tile:last-child:nth-child(odd){grid-column:1/-1}
+.tile svg{color:var(--tc,var(--red));background:var(--tb,var(--red-l));width:40px;height:40px;padding:8px;border-radius:12px;box-sizing:border-box}
+.qa a:nth-child(5n+1){background:#fbe6e6;color:#a32323}.qa a:nth-child(5n+2){background:#e5f4e6;color:#2b7a34}.qa a:nth-child(5n+3){background:#e6effb;color:#1f5fae}.qa a:nth-child(5n+4){background:#fff1dc;color:#8a4b00}.qa a:nth-child(5n+5){background:#efe9fb;color:#5b3fa8}
+#upcoming{border-left:0;border-radius:14px;padding:4px 12px}
+#upcoming a svg{width:32px;height:32px;padding:7px;border-radius:9px;box-sizing:border-box;flex:none}
+#upcoming a.k-off svg{background:#fff1dc;color:#a35a00}#upcoming a.k-board svg{background:#e6effb;color:#1f5fae}#upcoming a.k-special svg{background:#fde9c9;color:#8a4b00}#upcoming a.k-ev svg{background:#e5f4e6;color:#2b7a34}
+#upcoming a.k-special{font-weight:600}
+.new:not(#upcoming){border-left:0;border-radius:14px;padding:4px 12px}.new:not(#upcoming) a svg{width:32px;height:32px;padding:7px;border-radius:9px;box-sizing:border-box;flex:none;background:#efe9fb;color:#5b3fa8}.new:not(#upcoming) a:nth-child(2) svg{background:#e6effb;color:#1f5fae}.new:not(#upcoming) a:nth-child(3) svg{background:#e5f4e6;color:#2b7a34}
 </style>
 </head>
 <body>
@@ -573,7 +582,7 @@ function paintUpcoming(){const el=document.getElementById('upcoming');if(!el)ret
   const now=new Date();for(let k=0;k<3;k++){const bm=secondMonday(now.getFullYear(),now.getMonth()+k);if(iso(bm)>=today){items.push({d:iso(bm),t:es?'Reunión ordinaria de la junta, 6:00 PM, Oficina Central':'Regular board meeting, 6:00 PM, Central Office',i:'gavel',h:'#board'});break;}}
   items.sort((a,b)=>a.d.localeCompare(b.d));items=items.slice(0,5);
   const f=d=>new Date(d+'T12:00:00').toLocaleDateString(es?'es-US':'en-US',{weekday:'short',month:'short',day:'numeric'});
-  el.innerHTML=items.length?items.map(x=>`<a href="${x.h||'#calendar'}">${ic(x.i)}<span><b>${f(x.d)}</b> · ${esc(x.t)}</span></a>`).join(''):`<a href="#calendar">${ic('cal')}<span>${es?'Ver el calendario escolar':'See the school calendar'}</span></a>`;}
+  el.innerHTML=items.length?items.map(x=>`<a class="${x.i==='gavel'?(/Special|especial/.test(x.t)?'k-special':'k-board'):(/^No (school|hay)/.test(x.t)?'k-off':'k-ev')}" href="${x.h||'#calendar'}">${ic(x.i)}<span><b>${f(x.d)}</b> · ${esc(x.t)}</span></a>`).join(''):`<a href="#calendar">${ic('cal')}<span>${es?'Ver el calendario escolar':'See the school calendar'}</span></a>`;}
 /* ---- ask a question ---- */
 let KB=null,SAMPLE;
 const STOP=new Set('a an the of to in on for is are can my our we i do does what when how who will be my child kid kids son daughter student students about with if it at or and this that there have has should would could please el la los las de del y o en un una mi mis hijo hija que como cuando puede para por es son se lo le'.split(' '));
