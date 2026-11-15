@@ -185,6 +185,7 @@ body.agreeopen{overflow:hidden}
 .ttab{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:2px}.ttab th{font-weight:500;color:var(--muted);text-align:center;padding:2px}.ttab td{text-align:center;padding:3px 2px;border-top:1px solid var(--line)}.ttab td:first-child{text-align:left;color:var(--muted);max-width:90px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .inshort{background:#fff7e8;border:1px solid #f0dcb4;border-radius:10px;padding:10px 12px;margin:0 0 10px;font-size:15px;line-height:1.45}.inshort b{color:#7a4d00}
 .ptag{display:inline-block;font-size:11px;font-weight:600;color:#6b6760;background:#efece6;border-radius:5px;padding:1px 5px;vertical-align:1px;text-decoration:none}
+.nextbox{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:0 12px 12px 0;padding:12px 14px;margin:0 0 12px}.nextbox>svg{flex:none;width:24px;height:24px;color:var(--red)}.nextbox b{display:block;font-size:16px}.nextbox small{display:block;color:var(--muted);font-size:13px;margin-top:3px;line-height:1.4}
 </style>
 </head>
 <body>
@@ -340,6 +341,7 @@ body.agreeopen{overflow:hidden}
 </section><section data-page="board" data-title="School board">
 <h2 class="pt"><span data-l="en">School board</span><span data-l="es">Junta escolar</span></h2>
 <p class="lead"><span data-l="en">Board members, meeting minutes and videos, board packets and how to speak at a meeting.</span><span data-l="es">Miembros de la junta, actas y videos, paquetes de la junta y cómo hablar en una reunión.</span></p>
+<div class="nextbox"><svg class="i"><use href="#i-gavel"/></svg><div><b><span data-l="en">Next regular meeting</span><span data-l="es">Próxima reunión ordinaria</span>: <span id="nextmeet"></span></b><small><span data-l="en">Regular board meetings are held the second Monday of each month. Special meetings and hearings are posted on the district’s</span><span data-l="es">Las reuniones ordinarias son el segundo lunes de cada mes. Las reuniones especiales y audiencias se publican en las</span> <a href="https://www.usd353.com/apps/news/" target="_blank" rel="noopener"><span data-l="en">News page</span><span data-l="es">noticias del distrito</span></a>.</small></div></div>
 <div class="hero3">
 <a class="rowlink" id="latestmeet" href="#meetings" style="margin:0"><svg class="i"><use href="#i-cal"/></svg><span class="t"><b><span data-l="en">Latest meeting</span><span data-l="es">Última reunión</span></b><small><span data-l="en">Minutes and video</span><span data-l="es">Actas y video</span></small></span><svg class="i chev"><use href="#i-right"/></svg></a>
 <a class="rowlink" href="https://drive.google.com/drive/folders/1GO7i2WlRzv2nXCehkQpkfdBlBYea-jm6" target="_blank" rel="noopener" style="margin:0"><svg class="i"><use href="#i-folder"/></svg><span class="t"><b><span data-l="en">Board packets</span><span data-l="es">Paquetes de la junta</span></b><small><span data-l="en">Agendas and documents for each meeting</span><span data-l="es">Agendas y documentos de cada reunión</span></small></span><svg class="i chev"><use href="#i-right"/></svg></a>
@@ -518,6 +520,7 @@ function vSearch(term){
 const PAGES=[...document.querySelectorAll('section[data-page]')];
 const byCode={};DATA.pol.forEach(p=>{if(p.s!=='X'&&!byCode[p.c])byCode[p.c]=p;});
 document.querySelectorAll('[data-pol]').forEach(el=>{const p=byCode[el.dataset.pol];if(p)el.outerHTML=`<a class="pol" href="${link(p.u)}">${esc(p.t)} <span class="ptag">${esc(p.c)}</span></a>`;});
+function paintNext(){const el=document.getElementById('nextmeet');if(!el)return;const es=document.body.classList.contains('es');const today=iso(new Date());const now=new Date();for(let k=0;k<3;k++){const bm=secondMonday(now.getFullYear(),now.getMonth()+k);if(iso(bm)>=today){el.textContent=bm.toLocaleDateString(es?'es-US':'en-US',{weekday:'long',month:'long',day:'numeric'});break;}}}
 function paintMeetings(){const mt=document.getElementById('meetlist');if(mt)mt.innerHTML=meetingsHTML();try{const lm2=DATA.meetings[0].r.find(x=>x.m||x.v);const lt=document.getElementById('latestmeet');if(lm2&&lt){const es=document.body.classList.contains('es');lt.href=lm2.m||lm2.v;lt.target='_blank';lt.rel='noopener';lt.querySelector('small').textContent=fmt(lm2.d)+' · '+(es?(lm2.t==='Special meeting'?'Reunión especial':'Reunión ordinaria'):lm2.t)+(lm2.m?(es?' · actas':' · minutes'):'');}}catch(e){}const lm=DATA.meetings[0].r[0];const nm=document.getElementById('newmin');if(nm)nm.innerHTML=`${ic('file')}<span>${esc(lm.t)} minutes posted: ${fmt(lm.d)}</span>`;}
 paintMeetings();
 fetch('meetings.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{if(j&&Array.isArray(j.meetings)&&j.meetings.length){DATA.meetings=j.meetings;paintMeetings();}}).catch(()=>{});
@@ -546,7 +549,7 @@ document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');i
 
 /* ---- language ---- */
 const lb=document.getElementById('langbtn');
-function setLang(es){document.body.classList.toggle('es',es);document.documentElement.lang=es?'es':'en';lb.textContent=es?'English':'Español';lb.lang=es?'en':'es';q.placeholder=es?'¿En qué le podemos ayudar?':'What do you need help with?';try{localStorage.setItem('lang',es?'es':'en')}catch(e){}paintUpcoming();if(window.paintScores)paintScores();}
+function setLang(es){document.body.classList.toggle('es',es);document.documentElement.lang=es?'es':'en';lb.textContent=es?'English':'Español';lb.lang=es?'en':'es';q.placeholder=es?'¿En qué le podemos ayudar?':'What do you need help with?';try{localStorage.setItem('lang',es?'es':'en')}catch(e){}paintUpcoming();try{paintNext()}catch(e){}if(window.paintScores)paintScores();}
 lb.addEventListener('click',()=>setLang(!document.body.classList.contains('es')));
 /* ---- my school ---- */
 const sp=document.getElementById('schoolpick'),so=document.getElementById('mysout');
@@ -557,6 +560,7 @@ function secondMonday(y,m){const d=new Date(y,m,1);const add=(8-d.getDay())%7;re
 function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function paintUpcoming(){const el=document.getElementById('upcoming');if(!el)return;const es=document.body.classList.contains('es');const today=iso(new Date());
   let items=DATA.dates.filter(x=>x.d>=today).slice(0,4).map(x=>({d:x.d,t:es?x.es:x.en,i:'cal'}));
+  const now=new Date();for(let k=0;k<3;k++){const bm=secondMonday(now.getFullYear(),now.getMonth()+k);if(iso(bm)>=today){items.push({d:iso(bm),t:es?'Reunión ordinaria de la junta (segundo lunes)':'Regular board meeting (second Monday)',i:'gavel',h:'#board'});break;}}
   items.sort((a,b)=>a.d.localeCompare(b.d));items=items.slice(0,5);
   const f=d=>new Date(d+'T12:00:00').toLocaleDateString(es?'es-US':'en-US',{weekday:'short',month:'short',day:'numeric'});
   el.innerHTML=items.length?items.map(x=>`<a href="${x.h||'#calendar'}">${ic(x.i)}<span><b>${f(x.d)}</b> · ${esc(x.t)}</span></a>`).join(''):`<a href="#calendar">${ic('cal')}<span>${es?'Ver el calendario escolar':'See the school calendar'}</span></a>`;}
@@ -609,7 +613,7 @@ function showFB(){const u=fbp.value;fbl.href=u;const w=Math.max(180,Math.min(500
   const src='https://www.facebook.com/plugins/page.php?href='+encodeURIComponent(u)+'&tabs=timeline&width='+w+'&height=640&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false';
   fbo.innerHTML=`<iframe title="Facebook posts" src="${src}" width="${w}" height="640" loading="lazy" allow="encrypted-media; clipboard-write; web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;fbOn=true;}
 if(fbp){document.getElementById('fbbtn').addEventListener('click',showFB);fbp.addEventListener('change',()=>{fbl.href=fbp.value;if(fbOn)showFB();});}
-render(false);
+render(false);try{paintNext()}catch(e){}
 /* ---- test scores ---- */
 (function(){const el=document.getElementById('sgrid');if(!el||!DATA.scores)return;
 const SC={};DATA.scores.split(';').forEach(x=>{const[k,v]=x.split(':');SC[k]=v.split(',').map(Number)});
