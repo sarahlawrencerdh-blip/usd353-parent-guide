@@ -625,13 +625,20 @@ function meetingsHTML(){
   h+=yrs.map((y,i)=>`<div class="mt" data-yb="${i}" ${i?'hidden':''}>${y.r.map(m=>`<div class="mrow"><div class="d"><b>${fmtS(m.d)}</b><small>${esc(m.t)}</small></div>${m.m?`<a class="btn" href="${m.m}" target="_blank" rel="noopener">${ic('file')}Minutes</a>`:''}${m.v?`<a class="btn" href="${m.v}" target="_blank" rel="noopener">${ic('video')}Video</a>`:''}</div>`).join('')}</div>`).join('');
   return h;
 }
+const TXC=new WeakMap();function txt(el){let s=TXC.get(el);if(s==null){const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const a=[];while(w.nextNode())a.push(w.currentNode.nodeValue);s=a.join(' ');TXC.set(el,s)}return s}
 function vSearch(term){
-  const words=term.toLowerCase().split(/\s+/).filter(w=>w.length>1);
-  const hit=s=>words.some(w=>s.toLowerCase().includes(w));
-  const blocks=[...document.querySelectorAll('[data-search]')].filter(el=>hit(el.textContent));
-  const tops=DATA.topics.filter(t=>hit(t.l+' '+t.w));
+  const STOP=new Set('a an the to of in on for and or is are my our your i me we how do does can what when where who why with at by up be it if from about this that child children kid kids student students son daughter el la los las de del y o en un una mi mis su sus que como para por es se hijo hija hijos niño niña estudiante'.split(' '));
+  const all=term.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu,' ').split(/\s+/).filter(w=>w.length>1);
+  let words=all.filter(w=>!STOP.has(w));if(!words.length)words=all;
+  const re=words.map(w=>new RegExp('(^|[^\\p{L}])'+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'iu'));
+  const cnt=s=>re.reduce((n,r)=>n+(r.test(s)?1:0),0);
+  const need=words.length;
+  const pick=(arr,full,title)=>{let sc=arr.map(x=>({x,n:cnt(full(x)),tt:cnt(title(x))}));let m=sc.filter(o=>o.n>=need);if(!m.length&&need>1){const best=Math.max(0,...sc.map(o=>o.n));if(best>0)m=sc.filter(o=>o.n===best)}return m.sort((a,b)=>(b.tt-a.tt)||(b.n-a.n)).map(o=>o.x)};
+  const ttl=el=>(el.dataset.search||'')+' '+((el.querySelector('[data-l="en"]')||{}).textContent||'')+' '+((el.querySelector('[data-l="es"]')||{}).textContent||'');
+  const blocks=pick([...document.querySelectorAll('[data-search]')],txt,ttl);
+  const tops=pick(DATA.topics,t=>t.l+' '+t.w,t=>t.l);
   const tCodes=new Set(tops.flatMap(t=>t.p.map(p=>p.c)));
-  const pols=DATA.pol.filter(p=>p.s!=='X'&&!tCodes.has(p.c)&&hit(p.c+' '+p.t));
+  const pols=pick(DATA.pol.filter(p=>p.s!=='X'&&!tCodes.has(p.c)),p=>p.c+' '+p.t,p=>p.t);
   let h='';
   if(blocks.length) h+=`<h3 class="sh">In this guide</h3>`+blocks.map(el=>`<a class="rowlink" href="#${el.id}">${ic(el.dataset.icon||'right')}<span class="t"><b>${esc((el.querySelector(`[data-l="${document.body.classList.contains('es')?'es':'en'}"]`)||{}).textContent||el.dataset.search)}</b><small>${esc(el.closest('section').dataset.title)}</small></span>${ic('right').replace('class="i"','class="i chev"')}</a>`).join('');
   if(tops.length) h+=`<h3 class="sh">Policy topics</h3>`+tops.map(t=>`<a class="rowlink" href="#topic-${t.k}">${ic('book')}<span class="t"><b>${esc(t.l)}</b><small>${t.p.length} policies</small></span>${ic('right').replace('class="i"','class="i chev"')}</a>`).join('');
